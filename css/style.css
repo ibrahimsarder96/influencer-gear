@@ -1,0 +1,234 @@
+/* ----------------google-font-link-poppins------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+/*-------------------------*
+         header-section
+ --------------------------*/
+nav{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+.nav-title{
+  background-color: lightskyblue;
+}
+.container{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.navigation{
+  display: flex;
+}
+.navigation li{
+  list-style: none;
+  margin: 10px;
+}
+.navigation li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+/*-----------------------*
+         banner-part
+---------------------- */
+.banner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+  margin: 150px 0;
+
+}
+.title{
+  text-align: left;
+}
+.banner-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.banner-right{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner-right.bg-img{
+  background-image: url("Circle design.svg");
+  background-repeat: no-repeat;
+}
+.short-img{
+  width: 80%;
+}
+
+.banner-left h2{
+  font-size: 40px;
+}
+.banner-left p{
+  margin: 15px 0;
+}
+.link-btn{
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 15px 20px;
+  background-image:linear-gradient(90deg,#FF5575,#FF9F4A);
+  border-radius: 15px;
+  color: #ffffff;
+  font-weight: bold;
+}
+/*-------------------------*
+             brand-part
+-------------------------- */
+.all-brand{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 15px 0;
+}
+.border{
+  border: 1px solid gray;
+}
+/*-----------------------------* 
+            product-part 
+--------------------------------*/
+.container h2{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+.products{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  margin-right: 20px;
+}
+.product-item{
+border: 1px solid white;
+box-shadow: 10px 10px 20px lightgray;
+padding: 10px;
+margin: 15px 0;
+border-radius: 10px;
+}
+.product-item h3{
+  font-size: 25px;
+  margin: 15px 0;
+}
+.product-item h4{
+  font-size: 20px;
+  margin: 10px 0;
+}
+.filled{
+  color:#FB8200;
+}
+.empty{
+  color: #AEAEAE;
+
+}
+.product-info p{
+  color: dimgray;
+}
+.show-right{
+  text-align: right;
+  /* position: absolute; */
+  margin-top: 50px;
+  /* left: 1244px; */
+  color: #E02C6DDE;
+}
+
+/*--------------------*
+           footer
+----------------------- */
+
+footer{
+  text-align: center;
+  height: 230px;
+  background-color:  #120E43;
+  padding: 20px 0;
+}
+footer h1{
+  color:white;
+  margin: 15px 0;
+}
+footer p{
+  color:lightgray;
+  margin-bottom: 10px;
+}
+footer a{
+  color:white;
+  border: 1px solid gray;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+/*----------------------------*
+               media query
+------------------------------ */
+
+/*--------- desktop----------- */
+
+@media (max-width: 1180px) {
+  .container{
+    width: 1180px; 
+  }
+  
+  .products{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*---------- tablet ------------*/
+
+@media  (max-width:800px) {
+  .container{
+    width: 800px; 
+  }
+  .banner{
+    grid-template-columns: 1fr;
+  }
+  .banner-left{
+    order: 2;
+  }
+  .all-brand{
+    grid-template-columns:1fr;
+    text-align: center;
+  }
+  .products{
+    grid-template-columns: 1fr;
+  }
+}
+/*------------ smart-phone ----------------*/
+@media (max-width: 480px) {
+  .container{
+    width: 480px;
+  }
+  .banner{
+    grid-template-columns: 1fr;
+  }
+  .banner-left{
+    order: 2;
+  }
+  .all-brand{
+    grid-template-columns:1fr;
+    text-align: center;
+  }
+  .products{
+    grid-template-columns:  1fr;
+  }
+  .banner-left{
+    order: 2;
+  }
+  footer{
+    width: 550px;
+  }
+}
